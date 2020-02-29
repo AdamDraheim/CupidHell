@@ -23,13 +23,20 @@ public class Swap_Sprite : MonoBehaviour
     {
         if (player == null || player.GetComponent<PlayerStats>() == null)
         {
-            player = GameObject.Find("Player");
+            player = GameObject.FindGameObjectWithTag("Player");
         }
         else {
 
             float val = player.GetComponent<PlayerStats>().GetPower(type);
             Debug.Log(val * sprites.Length);
-            this.GetComponent<Image>().sprite = sprites[(int)(val * sprites.Length)];
+
+            if (this.GetComponent<Image>() != null)
+            {
+                this.GetComponent<Image>().sprite = sprites[(int)(val * sprites.Length)];
+            }
+            if (this.GetComponent<SpriteRenderer>() != null) {
+                this.GetComponent<SpriteRenderer>().sprite = sprites[(int)(val * sprites.Length -0.1f)];
+            }
 
         }
 
