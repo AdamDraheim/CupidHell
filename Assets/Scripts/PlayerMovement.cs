@@ -21,6 +21,10 @@ public class PlayerMovement : MonoBehaviour
     public Collision enemeyBullet;
 
     public BulletController theGun;
+    //Shooty variables
+    public bool isStream;
+    public bool isSpray;
+    public bool isMachine;
 
     void start()
     {
@@ -31,6 +35,16 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown("2"))
+        {
+            theGun.bulletSpeed = 20f;
+            theGun.timeBetweenShots = 0.001f;
+        }
+        else if (Input.GetKeyDown("1"))
+        {
+            theGun.bulletSpeed = 8f;
+            theGun.timeBetweenShots = 0.1f;
+        }
         //Player Input
         movementVelocity = movement * moveSpeed;
 
@@ -68,13 +82,11 @@ public class PlayerMovement : MonoBehaviour
                 isActive = true;
                 theGun.isFiring = false;
                 shield.SetActive(true);
-                //health -= regenSpeed;
             }
             else
             {
                 isActive = false;
                 shield.SetActive(false);
-                //health += regenSpeed;
             }
         }
     }
