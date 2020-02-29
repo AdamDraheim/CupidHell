@@ -36,7 +36,11 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            this.health -= 1;
+        }
+        Die();
     }
 
     public void Attack()
@@ -99,6 +103,8 @@ public class PlayerStats : MonoBehaviour
                 return weaponType[weapon_type.pistol];
             case "machinegun":
                 return weaponType[weapon_type.machinegun];
+            case "health":
+                return this.GetHealthProportion();
         }
         return 0;
     }
@@ -139,6 +145,6 @@ public class PlayerStats : MonoBehaviour
 
     public float GetHealthProportion()
     {
-        return this.health / this.maxHealth;
+        return (this.health / this.maxHealth);
     }
 }
