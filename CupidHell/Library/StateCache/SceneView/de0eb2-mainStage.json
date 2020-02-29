@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":7.697903633117676,"y":7.043824195861816,"z":-19.17154312133789},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":22.402523040771486,"orthographic":true}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":-1064.2718505859375,"y":250.2501983642578,"z":-415.8681640625},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":120.38731384277344,"orthographic":true}
+>>>>>>> origin/kindraBranch
