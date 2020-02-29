@@ -19,7 +19,7 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadScene(string name)
     {
-        LoadScene(name);
+        SceneManager.LoadScene(name);
     }
 
     public void Quit()
