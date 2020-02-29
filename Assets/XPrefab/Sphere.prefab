@@ -108,3 +108,5 @@ MonoBehaviour:
   bullet_obj: {fileID: 8174652754024687918}
   maxDistance: 0
   speed: 6
+  bulletSound: {fileID: 1245571943286737032, guid: 52d1ccb5ccf57544da85cede3f1e03a2,
+    type: 3}
