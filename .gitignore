@@ -50,6 +50,10 @@ ExportedObj/
 
 *.log
 
+*.assetDatabase3
+
+*.json
+
 
 # Unity3D generated meta files
 
