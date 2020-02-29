@@ -30,7 +30,7 @@ public class Powerup : MonoBehaviour
             Vector2 pos = player.transform.position;
             if (Vector2.Distance(this.transform.position, pos) <= pickupRange)
             {
-                player.GetComponent<PlayerStats>().UsePowerup(powerupName);
+                player.GetComponent<PlayerStats>().ChargePower(powerupName);
                 Destroy(this.gameObject);
             }
         }

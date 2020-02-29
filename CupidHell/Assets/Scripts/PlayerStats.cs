@@ -18,19 +18,22 @@ public class PlayerStats : MonoBehaviour
 
     public weapon_type Weapon;
 
+    private Dictionary<weapon_type, float> weaponType;
+
     // Start is called before the first frame update
     void Start()
     {
         this.Weapon = weapon_type.pistol;
         this.maxHealth = baseHealth;
         this.health = this.maxHealth;
+
+        this.weaponType = new Dictionary<weapon_type, float>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //int divisor = 0;
-        //int res = 0 / divisor;
+        
     }
 
     public void Attack()
@@ -45,28 +48,20 @@ public class PlayerStats : MonoBehaviour
                 break;
         }
     }
-    
-    public void UsePowerup(string name)
+
+    public void ChargePower(string name)
     {
+
         switch (name.ToLower())
         {
-            case "flame":
             case "flamethrower":
-                this.Weapon = weapon_type.flamethrower;
-                break;
-            case "pistol":
-                this.Weapon = weapon_type.pistol;
-                break;
-            case "machine":
-            case "machinegun":
-                this.Weapon = weapon_type.machinegun;
-                break;
-            default:
-                Debug.Log("String name " + name.ToLower() + " is not a valid keyword for powerup --- Stack< UsePowerup(" + name + ") in PlayerStats.cs >");
+
                 break;
         }
 
+        Debug.Log("String name " + name.ToLower() + " is not a valid keyword for powerup --- Stack< UsePowerup(" + name + ") in PlayerStats.cs >");
     }
+    
 
 
     public void DoDamage(float damage)
@@ -94,7 +89,17 @@ public class PlayerStats : MonoBehaviour
         if (health <= 0)
         {
             Destroy(this.gameObject);
+            Destroy(this.gameObject);
         }
     }
 
+    public float GetHealth()
+    {
+        return this.health;
+    }
+
+    public float GetHealthProportion()
+    {
+        return this.health / this.maxHealth;
+    }
 }
