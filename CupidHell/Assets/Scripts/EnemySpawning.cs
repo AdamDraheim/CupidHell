@@ -26,7 +26,7 @@ public class EnemySpawning : MonoBehaviour
             z = Random.Range(-screenBoundZ * 1.5f, screenBoundZ * 1.5f);
         } else
         {
-            if (Random.Range(0, 1) > 0.5f)
+            if (Random.Range(0.0f, 1.0f) > 0.4f)
             {
                 z = Random.Range(-screenBoundZ * 1.5f, -screenBoundZ);
             }
