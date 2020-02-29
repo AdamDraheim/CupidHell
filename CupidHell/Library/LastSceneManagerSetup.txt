@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/KindraScene.unity
+- path: Assets/Scenes/James Scene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
