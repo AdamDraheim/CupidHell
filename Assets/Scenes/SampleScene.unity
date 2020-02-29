@@ -326,6 +326,11 @@ MonoBehaviour:
     type: 3}
   timeBetweenShots: 0.1
   firePoint: {fileID: 1340604267}
+  pelletCount: 10
+  spreadAngle: 45
+  pellet: {fileID: 8174652754024687918, guid: d835485cde47f3d47854ed2ad2aae539, type: 3}
+  BarrelExit: {fileID: 1340604267}
+  isSpray: 0
 --- !u!114 &877450141
 MonoBehaviour:
   m_ObjectHideFlags: 0
