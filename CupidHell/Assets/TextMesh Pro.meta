@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:CupidHell/Assets/TextMesh Pro.meta
 guid: f54d1bd14bd3ca042bd867b519fee8cc
+=======
+guid: a07c1b4a44dd34b499a328ef107e54cd
+>>>>>>> 1341cf55a677863e22d6323512210ed329ec8a6a:CupidHell/Assets/Scripts.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
