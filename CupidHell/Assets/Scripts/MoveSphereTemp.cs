@@ -15,9 +15,4 @@ public class MoveSphereTemp : MonoBehaviour
     {
         transform.Translate(Vector3.forward * Time.deltaTime * 3);
     }
-    
-    void OnCollisionEnter(Collision collision)
-    {
-        transform.position = new Vector3(0, 0, -4f);
-    }
 }

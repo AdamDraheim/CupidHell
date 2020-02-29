@@ -20,12 +20,14 @@ public class DestructibleCover : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        health = health - 1;
-        Debug.Log("health decreased");
-        Destroy(collision.gameObject);
-        if (health < 1)
+        if (collision.gameObject.tag == "Bullet")
         {
-            Destroy(gameObject);
+            health = health - 1;
+            Destroy(collision.gameObject);
+            if (health <  1)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
