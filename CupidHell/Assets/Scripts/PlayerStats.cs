@@ -28,12 +28,15 @@ public class PlayerStats : MonoBehaviour
         this.health = this.maxHealth;
 
         this.weaponType = new Dictionary<weapon_type, float>();
+        weaponType.Add(weapon_type.flamethrower, 0);
+        weaponType.Add(weapon_type.pistol, 0);
+        weaponType.Add(weapon_type.machinegun, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void Attack()
@@ -41,10 +44,22 @@ public class PlayerStats : MonoBehaviour
         switch (Weapon)
         {
             case weapon_type.pistol:
+                if(weaponType[weapon_type.pistol] > 0)
+                {
+
+                }
                 break;
             case weapon_type.flamethrower:
+                if (weaponType[weapon_type.flamethrower] > 0)
+                {
+
+                }
                 break;
             case weapon_type.machinegun:
+                if (weaponType[weapon_type.machinegun] > 0)
+                {
+
+                }
                 break;
         }
     }
@@ -55,13 +70,38 @@ public class PlayerStats : MonoBehaviour
         switch (name.ToLower())
         {
             case "flamethrower":
-
+                weaponType[weapon_type.flamethrower] += 0.25f;
+                if (weaponType[weapon_type.flamethrower] > 1)
+                    weaponType[weapon_type.flamethrower] = 1;
+                break;
+            case "pistol":
+                weaponType[weapon_type.pistol] += 0.25f;
+                if (weaponType[weapon_type.pistol] > 1)
+                    weaponType[weapon_type.pistol] = 1;
+                break;
+            case "machinegun":
+                weaponType[weapon_type.machinegun] += 0.25f;
+                if (weaponType[weapon_type.machinegun] > 1)
+                    weaponType[weapon_type.machinegun] = 1;
                 break;
         }
 
-        Debug.Log("String name " + name.ToLower() + " is not a valid keyword for powerup --- Stack< UsePowerup(" + name + ") in PlayerStats.cs >");
+        
     }
     
+    public float GetPower(string name)
+    {
+        switch (name.ToLower())
+        {
+            case "flamethrower":
+                return weaponType[weapon_type.flamethrower];
+            case "pistol":
+                return weaponType[weapon_type.pistol];
+            case "machinegun":
+                return weaponType[weapon_type.machinegun];
+        }
+        return 0;
+    }
 
 
     public void DoDamage(float damage)
@@ -88,7 +128,6 @@ public class PlayerStats : MonoBehaviour
     {
         if (health <= 0)
         {
-            Destroy(this.gameObject);
             Destroy(this.gameObject);
         }
     }
