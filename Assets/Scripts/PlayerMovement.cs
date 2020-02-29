@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
     public bool isSpray;
     public bool isMachine;
 
+
+
     void start()
     {
         myRigidbody = GetComponent<Rigidbody>();
@@ -39,11 +41,18 @@ public class PlayerMovement : MonoBehaviour
         {
             theGun.bulletSpeed = 20f;
             theGun.timeBetweenShots = 0.001f;
+            isSpray = false;
         }
         else if (Input.GetKeyDown("1"))
         {
             theGun.bulletSpeed = 8f;
             theGun.timeBetweenShots = 0.1f;
+            isSpray = false;
+        }else if (Input.GetKeyDown("3"))
+        {
+            //theGun.isSpray = true;
+            theGun.isSpray = true;
+            
         }
         //Player Input
         movementVelocity = movement * moveSpeed;
@@ -136,4 +145,6 @@ public class PlayerMovement : MonoBehaviour
             health -= 5;
         }
     }
+
+ 
 }
