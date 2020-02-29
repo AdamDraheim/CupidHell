@@ -8,7 +8,17 @@ public class bullet : MonoBehaviour
     public GameObject bullet_obj;
     public float maxDistance;
     public float speed;
+    public AudioSource bulletSound;
 
+    void Start()
+    {
+        bulletSound.enabled = true;
+        if (bullet_obj != null)
+        {
+
+            Instantiate(bulletSound);
+        }
+    }
     // Update is called once per frame
     void Update()
     {
