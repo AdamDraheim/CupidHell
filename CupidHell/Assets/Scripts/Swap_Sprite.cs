@@ -28,7 +28,6 @@ public class Swap_Sprite : MonoBehaviour
         else {
 
             float val = player.GetComponent<PlayerStats>().GetPower(type);
-            Debug.Log(val * sprites.Length);
 
             if (this.GetComponent<Image>() != null)
             {
