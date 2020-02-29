@@ -451,7 +451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &355311295
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2230,7 +2230,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 32
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -2416,6 +2416,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4755426514150826208, guid: aac8ab0a38c6afb47baf2bdde2fa4bfe,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -904
+      objectReference: {fileID: 0}
     - target: {fileID: 4755426514150826209, guid: aac8ab0a38c6afb47baf2bdde2fa4bfe,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2536,11 +2541,27 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4755426514406081511, guid: aac8ab0a38c6afb47baf2bdde2fa4bfe,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e3edf00be3472524aa4deac7a13119b2,
+        type: 3}
+    - target: {fileID: 4755426514552461514, guid: aac8ab0a38c6afb47baf2bdde2fa4bfe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4755426514705671840, guid: aac8ab0a38c6afb47baf2bdde2fa4bfe,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 837998691}
+    - target: {fileID: 4755426514705671903, guid: aac8ab0a38c6afb47baf2bdde2fa4bfe,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -904
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aac8ab0a38c6afb47baf2bdde2fa4bfe, type: 3}
 --- !u!1001 &4850929407383547582
@@ -2659,6 +2680,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PauseCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4850929406615569812, guid: 02dbe841bfb03274f9162ad6a4952f05,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4850929407681832656, guid: 02dbe841bfb03274f9162ad6a4952f05,
         type: 3}
