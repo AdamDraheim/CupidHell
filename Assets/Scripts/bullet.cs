@@ -15,7 +15,6 @@ public class bullet : MonoBehaviour
         bulletSound.enabled = true;
         if (bullet_obj != null)
         {
-
             Instantiate(bulletSound);
         }
     }
